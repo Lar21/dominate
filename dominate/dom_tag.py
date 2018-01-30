@@ -354,7 +354,7 @@ class dom_tag(object):
           sb.append(indent_str * indent_level)
         child._render(sb, indent_level, indent_str, pretty, xhtml)
       else:
-        sb.append(unicode(child))
+        sb.append(unicode(child.decode('utf-8')))
 
     return inline
 
